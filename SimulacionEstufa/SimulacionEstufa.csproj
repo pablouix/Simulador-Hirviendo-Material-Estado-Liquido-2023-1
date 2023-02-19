@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<Resource Include="Img\manguera.png"/>
+		<Resource Include="Img\tanqueGas.png"/>
+		<Resource Include="Img\ornilla.png"/>
+		<Resource Include="Img\olla.png"/>
+		<Resource Include="Img\cuerpoEstufa.png"/>
+		<Resource Include="Img\controlPosicion0.png"/>
+	</ItemGroup>
+</Project>
