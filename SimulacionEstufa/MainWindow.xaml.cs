@@ -51,6 +51,7 @@ namespace SimulacionEstufa
                 posisicionOrnilla++;
             ControlOrnillaTXT.Text = posisicionOrnilla.ToString();
             ControlImagen.Source = ImagenControlOrnilla(posisicionOrnilla);
+            ornillaImagen.Source = ImagenOrnilla(posisicionOrnilla);
         }
         private void btnControlOrnillaDown(object sender, RoutedEventArgs e)
         {
@@ -58,9 +59,8 @@ namespace SimulacionEstufa
                 posisicionOrnilla--;
             ControlOrnillaTXT.Text = posisicionOrnilla.ToString();
             ControlImagen.Source = ImagenControlOrnilla(posisicionOrnilla);
+            ornillaImagen.Source = ImagenOrnilla(posisicionOrnilla);
         }
-
-
 
         private static BitmapImage ImagenControlOrnilla(int posicion)
         {
@@ -76,6 +76,23 @@ namespace SimulacionEstufa
                 return new BitmapImage(new Uri("/Img/controlPosicion4.png", UriKind.Relative));
             else
                 return new BitmapImage(new Uri("/Img/controlPosicion5.png", UriKind.Relative));
+        }
+
+
+        private static BitmapImage ImagenOrnilla(int posicion)
+        {
+            if (posicion == 0)
+                return new BitmapImage(new Uri("/Img/ornilla.png", UriKind.Relative));
+            else if (posicion == 1)
+                return new BitmapImage(new Uri("/Img/ornilla1.png", UriKind.Relative));
+            else if (posicion == 2)
+                return new BitmapImage(new Uri("/Img/ornilla2.png", UriKind.Relative));
+            else if (posicion == 3)
+                return new BitmapImage(new Uri("/Img/ornilla3.png", UriKind.Relative));
+            else if (posicion == 4)
+                return new BitmapImage(new Uri("/Img/ornilla4.png", UriKind.Relative));
+            else
+                return new BitmapImage(new Uri("/Img/ornilla5.png", UriKind.Relative));
         }
     }
 }

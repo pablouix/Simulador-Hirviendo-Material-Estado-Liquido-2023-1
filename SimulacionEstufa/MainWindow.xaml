@@ -16,7 +16,7 @@
         <Image Source="/Img/tanqueGas.png" Stretch="Uniform" Margin="15,223,0,0" HorizontalAlignment="Left" Width="152" Height="276" VerticalAlignment="Top" Grid.RowSpan="2"/>
 
         <Image Source="/Img/cuerpoEstufa.png" Stretch="Uniform" Margin="0,252,0,0" HorizontalAlignment="Center" Width="276" Height="125" VerticalAlignment="Top" OpacityMask="Black" Grid.RowSpan="2"/>
-        <Image Source="/Img/ornilla.png" Stretch="Uniform" Margin="0,234,0,0" HorizontalAlignment="Center" Width="112" Height="55" VerticalAlignment="Top"/>
+        <Image Source="/Img/ornilla.png" Stretch="Uniform" Margin="0,234,0,0" HorizontalAlignment="Center" Width="112" Height="55" VerticalAlignment="Top" x:Name="ornillaImagen"/>
         
         <Image Source="/Img/olla.png" Stretch="Uniform" Margin="0,24,0,0" HorizontalAlignment="Center" Width="152" Height="228" VerticalAlignment="Top" x:Name="ollaImagen"/>
 
