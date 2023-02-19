@@ -50,12 +50,32 @@ namespace SimulacionEstufa
             if(posisicionOrnilla<5)
                 posisicionOrnilla++;
             ControlOrnillaTXT.Text = posisicionOrnilla.ToString();
+            ControlImagen.Source = ImagenControlOrnilla(posisicionOrnilla);
         }
         private void btnControlOrnillaDown(object sender, RoutedEventArgs e)
         {
             if(posisicionOrnilla>0)
                 posisicionOrnilla--;
-            ControlOrnillaTXT.Text = posisicionOrnilla.ToString();  
+            ControlOrnillaTXT.Text = posisicionOrnilla.ToString();
+            ControlImagen.Source = ImagenControlOrnilla(posisicionOrnilla);
+        }
+
+
+
+        private static BitmapImage ImagenControlOrnilla(int posicion)
+        {
+            if(posicion == 0)
+                return new BitmapImage(new Uri("/Img/controlPosicion0.png", UriKind.Relative));
+            else if(posicion == 1)
+                return new BitmapImage(new Uri("/Img/controlPosicion1.png", UriKind.Relative));
+            else if(posicion==2)
+                return new BitmapImage(new Uri("/Img/controlPosicion2.png", UriKind.Relative));
+            else if (posicion == 3)
+                return new BitmapImage(new Uri("/Img/controlPosicion3.png", UriKind.Relative));
+            else if (posicion == 4)
+                return new BitmapImage(new Uri("/Img/controlPosicion4.png", UriKind.Relative));
+            else
+                return new BitmapImage(new Uri("/Img/controlPosicion5.png", UriKind.Relative));
         }
     }
 }
