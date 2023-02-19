@@ -12,6 +12,8 @@
 		<Resource Include="Img\tanqueGas.png"/>
 		<Resource Include="Img\ornilla.png"/>
 		<Resource Include="Img\olla.png"/>
+		<Resource Include="Img\ollaAgua.png"/>
+		<Resource Include="Img\ollaAceite.png"/>
 		<Resource Include="Img\cuerpoEstufa.png"/>
 		<Resource Include="Img\controlPosicion0.png"/>
 	</ItemGroup>

@@ -17,12 +17,13 @@
 
         <Image Source="/Img/cuerpoEstufa.png" Stretch="Uniform" Margin="0,252,0,0" HorizontalAlignment="Center" Width="276" Height="125" VerticalAlignment="Top" OpacityMask="Black" Grid.RowSpan="2"/>
         <Image Source="/Img/ornilla.png" Stretch="Uniform" Margin="0,234,0,0" HorizontalAlignment="Center" Width="112" Height="55" VerticalAlignment="Top"/>
-        <Image Source="/Img/olla.png" Stretch="Uniform" Margin="0,24,0,0" HorizontalAlignment="Center" Width="152" Height="228" VerticalAlignment="Top"/>
+        
+        <Image Source="/Img/olla.png" Stretch="Uniform" Margin="0,24,0,0" HorizontalAlignment="Center" Width="152" Height="228" VerticalAlignment="Top" x:Name="ollaImagen"/>
 
         <Image Source="/Img/controlPosicion0.png" Stretch="Uniform" Margin="0,0,417,172" HorizontalAlignment="Right" Width="57" Height="52" VerticalAlignment="Bottom" Grid.RowSpan="2"/>
         <Button Click="Button_Click" BorderBrush="AliceBlue" Height="32" VerticalAlignment="Top" HorizontalAlignment="Center" Width="260" Grid.Row="1" Margin="0,131,0,0">Iniciar Simulacion</Button>
-        <Button Click="Button_Click" Margin="322,309,0,0" BorderBrush="AliceBlue" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="35" Background="Blue" Grid.RowSpan="2"></Button>
-        <Button Click="Button_Click" Margin="362,309,0,0" BorderBrush="AliceBlue" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="35" Background="Yellow" Grid.RowSpan="2"/>
+        <Button Click="BtnAgua" Margin="322,309,0,0" BorderBrush="AliceBlue" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="35" Background="Blue" Grid.RowSpan="2"></Button>
+        <Button Click="BtnAceite" Margin="362,309,0,0" BorderBrush="AliceBlue" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="35" Background="Yellow" Grid.RowSpan="2"/>
 
 
         <TextBox Margin="624,263,24,25" Grid.RowSpan="2" Text="Aqui iran los resultados"  />

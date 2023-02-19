@@ -31,5 +31,16 @@ namespace SimulacionEstufa
         {
 
         }
+
+
+        private void BtnAgua(object sender, RoutedEventArgs e)
+        {
+            ollaImagen.Source = new BitmapImage(new Uri("/Img/ollaAgua.png", UriKind.Relative));
+        }
+        private void BtnAceite(object sender, RoutedEventArgs e)
+        {
+            ollaImagen.Source = new BitmapImage(new Uri("/Img/ollaAceite.png", UriKind.Relative));
+        }
+
     }
 }
