@@ -20,6 +20,7 @@ namespace SimulacionEstufa
     /// </summary>
     public partial class MainWindow : Window
     {
+        public int posisicionOrnilla = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -44,5 +45,17 @@ namespace SimulacionEstufa
             MaterialTxt.Text = "Aceite";
         }
 
+        private void btnControlOrnillaUp(object sender, RoutedEventArgs e)
+        {
+            if(posisicionOrnilla<5)
+                posisicionOrnilla++;
+            ControlOrnillaTXT.Text = posisicionOrnilla.ToString();
+        }
+        private void btnControlOrnillaDown(object sender, RoutedEventArgs e)
+        {
+            if(posisicionOrnilla>0)
+                posisicionOrnilla--;
+            ControlOrnillaTXT.Text = posisicionOrnilla.ToString();  
+        }
     }
 }

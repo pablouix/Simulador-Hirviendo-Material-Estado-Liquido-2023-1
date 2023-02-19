@@ -27,9 +27,9 @@
 
 
         <TextBox Margin="624,263,24,25" Grid.RowSpan="2" Text="Aqui iran los resultados"  />
-
+        <!-- control ornillas-->
         <StackPanel Orientation="Vertical" Margin="501,296,0,0" Height="56" VerticalAlignment="Top" Grid.RowSpan="2" HorizontalAlignment="Left" Background="White" Width="19">
-            <Button Content="V" RenderTransformOrigin="0.5,0.5">
+            <Button Content="V" RenderTransformOrigin="0.5,0.5" Click="btnControlOrnillaUp">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -39,8 +39,8 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <TextBlock HorizontalAlignment="Center"><Run Text="0"/></TextBlock>
-            <Button RenderTransformOrigin="0.5,0.5" Content="V">
+            <TextBlock HorizontalAlignment="Center" x:Name="ControlOrnillaTXT"><Run Text="0"/></TextBlock>
+            <Button RenderTransformOrigin="0.5,0.5" Content="V" Click="btnControlOrnillaDown" >
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
