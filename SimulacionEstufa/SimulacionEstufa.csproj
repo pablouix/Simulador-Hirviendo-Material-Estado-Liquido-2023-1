@@ -10,11 +10,25 @@
 	<ItemGroup>
 		<Resource Include="Img\manguera.png"/>
 		<Resource Include="Img\tanqueGas.png"/>
-		<Resource Include="Img\ornilla.png"/>
+	
+		<Resource Include="Img\cuerpoEstufa.png"/>
+
 		<Resource Include="Img\olla.png"/>
 		<Resource Include="Img\ollaAgua.png"/>
 		<Resource Include="Img\ollaAceite.png"/>
-		<Resource Include="Img\cuerpoEstufa.png"/>
+		
+		<Resource Include="Img\ornilla.png"/>
+		<Resource Include="Img\ornilla1.png"/>
+		<Resource Include="Img\ornilla2.png"/>
+		<Resource Include="Img\ornilla3.png"/>
+		<Resource Include="Img\ornilla4.png"/>
+		<Resource Include="Img\ornilla5.png"/>
+		
 		<Resource Include="Img\controlPosicion0.png"/>
+		<Resource Include="Img\controlPosicion1.png"/>
+		<Resource Include="Img\controlPosicion2.png"/>
+		<Resource Include="Img\controlPosicion3.png"/>
+		<Resource Include="Img\controlPosicion4.png"/>
+		<Resource Include="Img\controlPosicion5.png"/>
 	</ItemGroup>
 </Project>
