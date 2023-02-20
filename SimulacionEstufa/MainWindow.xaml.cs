@@ -31,7 +31,11 @@ namespace SimulacionEstufa
 
         private void BtnIniciarSimulacion(object sender, RoutedEventArgs e)
         {
-
+            DiametroTuberiaBox.Text = "";
+            LogintudTuberiaBox.Text = "";
+            PresionDelTanqueBox.Text = "";
+            CantidadMaterialBox.Text = "";
+            ResultadosBox.Text = "";
         }
 
 

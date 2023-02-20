@@ -26,7 +26,7 @@
         <Button Click="BtnAceite" Margin="362,309,0,0" BorderBrush="AliceBlue" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="35" Background="Yellow" Grid.RowSpan="2"/>
 
 
-        <TextBox Margin="624,263,24,25" Grid.RowSpan="2" Text="Aqui iran los resultados"  />
+        <TextBox Margin="624,263,24,25" Grid.RowSpan="2" Text="Aqui iran los resultados" x:Name="ResultadosBox" />
         <!-- control ornillas-->
         <StackPanel Orientation="Vertical" Margin="501,296,0,0" Height="56" VerticalAlignment="Top" Grid.RowSpan="2" HorizontalAlignment="Left" Background="White" Width="19">
             <Button Content="V" RenderTransformOrigin="0.5,0.5" Click="btnControlOrnillaUp">
@@ -93,16 +93,16 @@
         </StackPanel>
 
         <TextBlock Margin="163,117,0,0" FontSize="16" HorizontalAlignment="Left" Width="105" Height="22" VerticalAlignment="Top">Tuberia de gas</TextBlock>
-        <TextBox Margin="224,144,618,170" />
-        <TextBox Margin="224,172,618,141" />
+        <TextBox Margin="224,144,618,170" x:Name="DiametroTuberiaBox"/>
+        <TextBox Margin="224,172,618,141" x:Name="LogintudTuberiaBox"/>
         <TextBlock Margin="163,145,0,171" Text="Diámetro" HorizontalAlignment="Left" Width="56"/>
         <TextBlock Margin="163,172,0,144" Text="Longitud" RenderTransformOrigin="0.478,1.602" HorizontalAlignment="Left" Width="53"/>
         <TextBlock Margin="174,66,0,0" FontSize="16" HorizontalAlignment="Left" Width="146" Height="22" VerticalAlignment="Top" Grid.Row="1" Text="Presión del tanque"/>
-        <TextBox Margin="235,93,607,73" Grid.Row="1" />
+        <TextBox Margin="235,93,607,73" Grid.Row="1" x:Name="PresionDelTanqueBox" />
         <TextBlock Margin="174,94,0,74" Text="Cantidad" HorizontalAlignment="Left" Width="56" Grid.Row="1"/>
 
         <TextBlock Margin="584,118,0,0" FontSize="16" HorizontalAlignment="Left" Width="105" Height="22" VerticalAlignment="Top" Text="Material" x:Name="MaterialTxt"/>
-        <TextBox Margin="645,145,197,169" />
+        <TextBox Margin="645,145,197,169" x:Name="CantidadMaterialBox"/>
         <TextBlock Margin="584,146,0,170" Text="Cantidad" HorizontalAlignment="Left" Width="56"/>
         <TextBlock Margin="298,94,0,74" Text="kPA" HorizontalAlignment="Left" Width="56" Grid.Row="1"/>
         <TextBlock Margin="284,146,0,170" Text="m" HorizontalAlignment="Left" Width="56"/>
