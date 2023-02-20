@@ -31,11 +31,23 @@ namespace SimulacionEstufa
 
         private void BtnIniciarSimulacion(object sender, RoutedEventArgs e)
         {
-            DiametroTuberiaBox.Text = "";
-            LogintudTuberiaBox.Text = "";
-            PresionDelTanqueBox.Text = "";
-            CantidadMaterialBox.Text = "";
-            ResultadosBox.Text = "";
+            if (string.IsNullOrEmpty(DiametroTuberiaBox.Text) || string.IsNullOrEmpty(LogintudTuberiaBox.Text) || string.IsNullOrEmpty(PresionDelTanqueBox.Text) || string.IsNullOrEmpty(CantidadMaterialBox.Text) || string.IsNullOrEmpty(ResultadosBox.Text))
+            {
+                MessageBox.Show("Por favor, rellena todos los campos.", "Error");
+            }
+            else if (posisicionAperturaTanque == 0 || posisicionOrnilla == 0)
+            {
+                MessageBox.Show("La estufa esta apagada.", "Error");
+            }
+            else
+            {
+                DiametroTuberiaBox.Text = "";
+                LogintudTuberiaBox.Text = "";
+                PresionDelTanqueBox.Text = "";
+                CantidadMaterialBox.Text = "";
+                ResultadosBox.Text = "";
+            }
+          
         }
 
 
