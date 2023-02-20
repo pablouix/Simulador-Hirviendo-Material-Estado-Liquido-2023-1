@@ -17,7 +17,7 @@
 
         <Image Source="/Img/cuerpoEstufa.png" Stretch="Uniform" Margin="0,252,0,0" HorizontalAlignment="Center" Width="276" Height="125" VerticalAlignment="Top" OpacityMask="Black" Grid.RowSpan="2"/>
         <Image Source="/Img/ornilla.png" Stretch="Uniform" Margin="0,234,0,0" HorizontalAlignment="Center" Width="112" Height="55" VerticalAlignment="Top" x:Name="ornillaImagen"/>
-        
+
         <Image Source="/Img/olla.png" Stretch="Uniform" Margin="0,24,0,0" HorizontalAlignment="Center" Width="152" Height="228" VerticalAlignment="Top" x:Name="ollaImagen"/>
 
         <Image Source="/Img/controlPosicion0.png" Stretch="Uniform" Margin="0,0,417,172" HorizontalAlignment="Right" Width="57" Height="52" VerticalAlignment="Bottom" Grid.RowSpan="2" x:Name="ControlImagen"/>
@@ -100,9 +100,13 @@
         <TextBlock Margin="174,66,0,0" FontSize="16" HorizontalAlignment="Left" Width="146" Height="22" VerticalAlignment="Top" Grid.Row="1" Text="Presión del tanque"/>
         <TextBox Margin="235,93,607,73" Grid.Row="1" />
         <TextBlock Margin="174,94,0,74" Text="Cantidad" HorizontalAlignment="Left" Width="56" Grid.Row="1"/>
-        
+
         <TextBlock Margin="584,118,0,0" FontSize="16" HorizontalAlignment="Left" Width="105" Height="22" VerticalAlignment="Top" Text="Material" x:Name="MaterialTxt"/>
         <TextBox Margin="645,145,197,169" />
         <TextBlock Margin="584,146,0,170" Text="Cantidad" HorizontalAlignment="Left" Width="56"/>
+        <TextBlock Margin="298,94,0,74" Text="kPA" HorizontalAlignment="Left" Width="56" Grid.Row="1"/>
+        <TextBlock Margin="284,146,0,170" Text="m" HorizontalAlignment="Left" Width="56"/>
+        <TextBlock Margin="284,174,0,142" Text="m" HorizontalAlignment="Left" Width="56"/>
+        <TextBlock Margin="708,146,0,170" Text="L" HorizontalAlignment="Left" Width="56"/>
     </Grid>
 </Window>
