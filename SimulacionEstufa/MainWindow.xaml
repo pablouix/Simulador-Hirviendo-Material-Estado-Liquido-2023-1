@@ -21,7 +21,7 @@
         <Image Source="/Img/olla.png" Stretch="Uniform" Margin="0,24,0,0" HorizontalAlignment="Center" Width="152" Height="228" VerticalAlignment="Top" x:Name="ollaImagen"/>
 
         <Image Source="/Img/controlPosicion0.png" Stretch="Uniform" Margin="0,0,417,172" HorizontalAlignment="Right" Width="57" Height="52" VerticalAlignment="Bottom" Grid.RowSpan="2" x:Name="ControlImagen"/>
-        <Button Click="Button_Click" BorderBrush="AliceBlue" Height="32" VerticalAlignment="Top" HorizontalAlignment="Center" Width="260" Grid.Row="1" Margin="0,131,0,0">Iniciar Simulacion</Button>
+        <Button Click="BtnIniciarSimulacion" BorderBrush="AliceBlue" Height="32" VerticalAlignment="Top" HorizontalAlignment="Center" Width="260" Grid.Row="1" Margin="0,131,0,0">Iniciar Simulacion</Button>
         <Button Click="BtnAgua" Margin="322,309,0,0" BorderBrush="AliceBlue" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="35" Background="Blue" Grid.RowSpan="2"></Button>
         <Button Click="BtnAceite" Margin="362,309,0,0" BorderBrush="AliceBlue" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="35" Background="Yellow" Grid.RowSpan="2"/>
 
@@ -61,7 +61,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </StackPanel.RenderTransform>
-            <Button Content="V" RenderTransformOrigin="0.5,0.5">
+            <Button Content="V" RenderTransformOrigin="0.5,0.5" Click="btnAperturaTanqueIzquierdo">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -71,7 +71,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <TextBlock HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+            <TextBlock HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" x:Name="ControlAperturaTanqueTXT">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -80,7 +80,7 @@
                         <TranslateTransform/>
                     </TransformGroup>
                 </TextBlock.RenderTransform><Run Text="0"/></TextBlock>
-            <Button RenderTransformOrigin="0.5,0.5" Content="V">
+            <Button RenderTransformOrigin="0.5,0.5" Content="V" Click="btnAperturaTanqueDerecho">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>

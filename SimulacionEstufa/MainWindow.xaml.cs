@@ -21,6 +21,7 @@ namespace SimulacionEstufa
     public partial class MainWindow : Window
     {
         public int posisicionOrnilla = 0;
+        public int posisicionAperturaTanque = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace SimulacionEstufa
             this.MaxHeight = this.Height;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BtnIniciarSimulacion(object sender, RoutedEventArgs e)
         {
 
         }
@@ -52,6 +53,11 @@ namespace SimulacionEstufa
             ControlOrnillaTXT.Text = posisicionOrnilla.ToString();
             ControlImagen.Source = ImagenControlOrnilla(posisicionOrnilla);
             ornillaImagen.Source = ImagenOrnilla(posisicionOrnilla);
+
+            if (posisicionAperturaTanque == 0)
+            {
+                ornillaImagen.Source = ImagenOrnilla(0);
+            }
         }
         private void btnControlOrnillaDown(object sender, RoutedEventArgs e)
         {
@@ -60,6 +66,11 @@ namespace SimulacionEstufa
             ControlOrnillaTXT.Text = posisicionOrnilla.ToString();
             ControlImagen.Source = ImagenControlOrnilla(posisicionOrnilla);
             ornillaImagen.Source = ImagenOrnilla(posisicionOrnilla);
+
+            if (posisicionAperturaTanque == 0)
+            {
+                ornillaImagen.Source = ImagenOrnilla(0);
+            }
         }
 
         private static BitmapImage ImagenControlOrnilla(int posicion)
@@ -93,6 +104,26 @@ namespace SimulacionEstufa
                 return new BitmapImage(new Uri("/Img/ornilla4.png", UriKind.Relative));
             else
                 return new BitmapImage(new Uri("/Img/ornilla5.png", UriKind.Relative));
+        }
+
+        private void btnAperturaTanqueDerecho(object sender, RoutedEventArgs e)
+        {
+
+            if (posisicionAperturaTanque < 5)
+                posisicionAperturaTanque++;
+            ornillaImagen.Source = ImagenOrnilla(posisicionOrnilla);
+           ControlAperturaTanqueTXT.Text= posisicionAperturaTanque.ToString();
+        }
+
+        private void btnAperturaTanqueIzquierdo(object sender, RoutedEventArgs e)
+        {
+            if (posisicionAperturaTanque > 0)
+                posisicionAperturaTanque--;
+            if (posisicionAperturaTanque== 0)
+            {
+                ornillaImagen.Source = ImagenOrnilla(0);
+            }
+            ControlAperturaTanqueTXT.Text = posisicionAperturaTanque.ToString();
         }
     }
 }
