@@ -109,7 +109,7 @@ namespace SimulacionEstufa
         private static BitmapImage ImagenOrnilla(int posicion)
         {
             if (posicion == 0)
-                return new BitmapImage(new Uri("/Img/ornilla.png", UriKind.Relative));
+                return new BitmapImage(new Uri("/Img/ornilla0.png", UriKind.Relative));
             else if (posicion == 1)
                 return new BitmapImage(new Uri("/Img/ornilla1.png", UriKind.Relative));
             else if (posicion == 2)
