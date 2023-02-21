@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-	<ItemGroup>
+  <ItemGroup>
 		<Resource Include="Img/Icono.png" />
 
 		<Resource Include="Img/tanqueGas.png" />
@@ -20,14 +20,14 @@
 		<Resource Include="Img/recipientes/olla.png" />
 		<Resource Include="Img/recipientes/ollaAgua.png" />
 		<Resource Include="Img/recipientes/ollaAceite.png" />
-
+		
 		<Resource Include="Img/ornillas/ornilla0.png" />
 		<Resource Include="Img/ornillas/ornilla1.png" />
 		<Resource Include="Img/ornillas/ornilla2.png" />
 		<Resource Include="Img/ornillas/ornilla3.png" />
 		<Resource Include="Img/ornillas/ornilla4.png" />
 		<Resource Include="Img/ornillas/ornilla5.png" />
-
+		
 		<Resource Include="Img/perillas/controlPosicion0.png" />
 		<Resource Include="Img/perillas/controlPosicion1.png" />
 		<Resource Include="Img/perillas/controlPosicion2.png" />

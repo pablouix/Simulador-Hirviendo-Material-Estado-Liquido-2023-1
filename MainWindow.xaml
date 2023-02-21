@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimulacionEstufa"
         mc:Ignorable="d"
-   Title="Simulación Hirviendo un material de estado líquido" Height="600" Width="900"
+        Title="Simulación Hirviendo un material de estado líquido" Height="600" Width="900"
         WindowStartupLocation="CenterScreen" Icon="Img/Icono.png">
 
     <Grid Height="524" VerticalAlignment="Top" Margin="0,10,0,0">
@@ -19,7 +19,7 @@
 
         <Image Source="/Img/cuerpoEstufa.png" Stretch="Uniform" Margin="0,252,0,0" HorizontalAlignment="Center" Width="276" Height="125" VerticalAlignment="Top" OpacityMask="Black" Grid.RowSpan="2"/>
         <Image Source="/Img/ornillas/ornilla0.png" Stretch="Uniform" Margin="0,234,0,0" HorizontalAlignment="Center" Width="112" Height="55" VerticalAlignment="Top" x:Name="ornillaImagen"/>
-
+        
         <Image Source="/Img/recipientes/olla.png" Stretch="Uniform" Margin="0,24,0,0" HorizontalAlignment="Center" Width="152" Height="228" VerticalAlignment="Top" x:Name="ollaImagen"/>
 
         <Image Source="/Img/perillas/controlPosicion0.png" Stretch="Uniform" Margin="0,0,417,172" HorizontalAlignment="Right" Width="57" Height="52" VerticalAlignment="Bottom" Grid.RowSpan="2" x:Name="ControlImagen"/>
@@ -35,10 +35,10 @@
 
         <TextBox Margin="624,263,24,25" Grid.RowSpan="2" Text="Resultados:" x:Name="ResultadosBox" IsReadOnly="true" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
         ScrollViewer.VerticalScrollBarVisibility="Auto" FontSize="18" />
-
+        
         <!-- control ornillas-->
         <StackPanel Orientation="Vertical" Margin="501,296,0,0" Height="56" VerticalAlignment="Top" Grid.RowSpan="2" HorizontalAlignment="Left" Background="White" Width="19">
-
+            
             <Button Content="↓" RenderTransformOrigin="0.5,0.5" Click="btnControlOrnillaUp">
                 <Button.RenderTransform>
                     <TransformGroup>
@@ -53,7 +53,7 @@
             <TextBlock x:Name="ControlOrnillaTXT" HorizontalAlignment="Center">
                 <Run Text="0"/>
             </TextBlock>
-
+            
             <Button RenderTransformOrigin="0.5,0.5" Content="↓" Click="btnControlOrnillaDown" >
                 <Button.RenderTransform>
                     <TransformGroup>
@@ -99,7 +99,7 @@
                 
                 <Run Text="0"/>
             </TextBlock>
-
+                
             <Button RenderTransformOrigin="0.5,0.5" Content="↓" Click="btnAperturaTanqueDerecho" >
                 <Button.RenderTransform>
                     <TransformGroup>

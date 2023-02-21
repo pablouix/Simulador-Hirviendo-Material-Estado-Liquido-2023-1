@@ -1,11 +1,11 @@
-﻿using SimulacionEstufa.BLL;
-using SimulacionEstufa.Entidad;
-using System;
+﻿using System;
+using System.Threading.Tasks;
+using System.Threading;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,6 +16,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using SimulacionEstufa.Entidad;
+using SimulacionEstufa.bll;
 
 namespace SimulacionEstufa
 {
@@ -30,10 +32,10 @@ namespace SimulacionEstufa
         Estufa estufa = new Estufa();
         CalculoSimulacion simulacion;
 
-        float[] eficiencia = { 0.0f, 0.2f, 0.4f, 0.6f, 0.8f, 1.0f };
+        float[] eficiencia = {0.0f, 0.2f, 0.4f, 0.6f, 0.8f, 1.0f};
         DispatcherTimer timer;
         Stopwatch stopWatch = new Stopwatch();
-
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -47,7 +49,7 @@ namespace SimulacionEstufa
                 MessageBox.Show("Por favor, rellena todos los campos.", "Error");
             else if (posisicionAperturaTanque == 0 || posisicionOrnilla == 0)
                 MessageBox.Show("La estufa esta apagada.", "Error");
-            else if (MaterialTxt.Text == "Material")
+             else if (MaterialTxt.Text == "Material")
                 MessageBox.Show("El recipiente esta vacio", "Error");
             else
             {
@@ -79,7 +81,7 @@ namespace SimulacionEstufa
             ResultadosBox.Text += $"Temperatura: {simulacion.GetTemperatura().ToString("N2")}\n";
             ResultadosBox.Text += $"Calor necesario: {simulacion.CalorNecesario().ToString("N2")}\n";
 
-            if (simulacion.estufa.temperaturaInicial > simulacion.estufa.temperaturaDeseada)
+            if(simulacion.estufa.temperaturaInicial > simulacion.estufa.temperaturaDeseada)
                 timer.Stop();
         }
 
@@ -101,7 +103,7 @@ namespace SimulacionEstufa
 
         private void btnControlOrnillaUp(object sender, RoutedEventArgs e)
         {
-            if (posisicionOrnilla < 5)
+            if(posisicionOrnilla < 5)
                 posisicionOrnilla++;
             ControlOrnillaTXT.Text = posisicionOrnilla.ToString();
             ControlImagen.Source = ImagenControlOrnilla(posisicionOrnilla);
@@ -115,7 +117,7 @@ namespace SimulacionEstufa
 
         private void btnControlOrnillaDown(object sender, RoutedEventArgs e)
         {
-            if (posisicionOrnilla > 0)
+            if(posisicionOrnilla > 0)
                 posisicionOrnilla--;
             ControlOrnillaTXT.Text = posisicionOrnilla.ToString();
             ControlImagen.Source = ImagenControlOrnilla(posisicionOrnilla);
@@ -129,7 +131,7 @@ namespace SimulacionEstufa
 
         private static BitmapImage ImagenControlOrnilla(int posicion)
         {
-            return new BitmapImage(new Uri("/Img/perillas/controlPosicion" + Convert.ToString(posicion) + ".png", UriKind.Relative));
+            return new BitmapImage(new Uri("/Img/perillas/controlPosicion"+ Convert.ToString(posicion) + ".png", UriKind.Relative));
         }
 
         private static BitmapImage ImagenOrnilla(int posicion)
@@ -141,16 +143,16 @@ namespace SimulacionEstufa
         {
             if (posisicionAperturaTanque < 5)
                 posisicionAperturaTanque++;
-
+            
             ornillaImagen.Source = ImagenOrnilla(posisicionOrnilla);
-            ControlAperturaTanqueTXT.Text = posisicionAperturaTanque.ToString();
+            ControlAperturaTanqueTXT.Text= posisicionAperturaTanque.ToString();
         }
 
         private void btnAperturaTanqueIzquierdo(object sender, RoutedEventArgs e)
         {
             if (posisicionAperturaTanque > 0)
                 posisicionAperturaTanque--;
-
+                
             if (posisicionAperturaTanque == 0)
                 ornillaImagen.Source = ImagenOrnilla(0);
 
