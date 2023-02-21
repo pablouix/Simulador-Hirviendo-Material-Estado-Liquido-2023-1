@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimulacionEstufa"
         mc:Ignorable="d"
-        Title="Simulación Hirviendo un material de estado líquido" Height="600" Width="900">
+   Title="Simulación Hirviendo un material de estado líquido" Height="600" Width="900"
+        WindowStartupLocation="CenterScreen" Icon="Img/Icono.png">
+
     <Grid Height="524" VerticalAlignment="Top" Margin="0,10,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="84*"/>
@@ -16,20 +18,28 @@
         <Image Source="/Img/tanqueGas.png" Stretch="Uniform" Margin="15,223,0,0" HorizontalAlignment="Left" Width="152" Height="276" VerticalAlignment="Top" Grid.RowSpan="2"/>
 
         <Image Source="/Img/cuerpoEstufa.png" Stretch="Uniform" Margin="0,252,0,0" HorizontalAlignment="Center" Width="276" Height="125" VerticalAlignment="Top" OpacityMask="Black" Grid.RowSpan="2"/>
-        <Image Source="/Img/ornilla0.png" Stretch="Uniform" Margin="0,234,0,0" HorizontalAlignment="Center" Width="112" Height="55" VerticalAlignment="Top" x:Name="ornillaImagen"/>
+        <Image Source="/Img/ornillas/ornilla0.png" Stretch="Uniform" Margin="0,234,0,0" HorizontalAlignment="Center" Width="112" Height="55" VerticalAlignment="Top" x:Name="ornillaImagen"/>
 
-        <Image Source="/Img/olla.png" Stretch="Uniform" Margin="0,24,0,0" HorizontalAlignment="Center" Width="152" Height="228" VerticalAlignment="Top" x:Name="ollaImagen"/>
+        <Image Source="/Img/recipientes/olla.png" Stretch="Uniform" Margin="0,24,0,0" HorizontalAlignment="Center" Width="152" Height="228" VerticalAlignment="Top" x:Name="ollaImagen"/>
 
-        <Image Source="/Img/controlPosicion0.png" Stretch="Uniform" Margin="0,0,417,172" HorizontalAlignment="Right" Width="57" Height="52" VerticalAlignment="Bottom" Grid.RowSpan="2" x:Name="ControlImagen"/>
-        <Button Click="BtnIniciarSimulacion" BorderBrush="AliceBlue" Height="32" VerticalAlignment="Top" HorizontalAlignment="Center" Width="260" Grid.Row="1" Margin="0,131,0,0">Iniciar Simulacion</Button>
-        <Button Click="BtnAgua" Margin="322,309,0,0" BorderBrush="AliceBlue" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="35" Background="Blue" Grid.RowSpan="2"></Button>
-        <Button Click="BtnAceite" Margin="362,309,0,0" BorderBrush="AliceBlue" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="35" Background="Yellow" Grid.RowSpan="2"/>
+        <Image Source="/Img/perillas/controlPosicion0.png" Stretch="Uniform" Margin="0,0,417,172" HorizontalAlignment="Right" Width="57" Height="52" VerticalAlignment="Bottom" Grid.RowSpan="2" x:Name="ControlImagen"/>
+        <Button Click="BtnIniciarSimulacion" BorderBrush="AliceBlue" Height="32" VerticalAlignment="Top" HorizontalAlignment="Center" Width="260" Grid.Row="1" Margin="0,131,0,0">Iniciar Simulación</Button>
 
+        <Button Click="BtnAgua" BorderBrush="Transparent" Margin="322,309,0,0" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="35" Background="Transparent" Grid.RowSpan="2">
+            <Image Source="/Img/liquidos/btnAgua.png" Stretch="Uniform" />
+        </Button>
 
-        <TextBox Margin="624,263,24,25" Grid.RowSpan="2" Text="Aqui iran los resultados" x:Name="ResultadosBox" />
+        <Button Click="BtnAceite" BorderBrush="Transparent" Margin="362,309,0,0" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="35" Background="Transparent" Grid.RowSpan="2">
+            <Image Source="/Img/liquidos/btnAceite.png" Stretch="Uniform" />
+        </Button>
+
+        <TextBox Margin="624,263,24,25" Grid.RowSpan="2" Text="Resultados:" x:Name="ResultadosBox" IsReadOnly="true" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+        ScrollViewer.VerticalScrollBarVisibility="Auto" FontSize="18" />
+
         <!-- control ornillas-->
         <StackPanel Orientation="Vertical" Margin="501,296,0,0" Height="56" VerticalAlignment="Top" Grid.RowSpan="2" HorizontalAlignment="Left" Background="White" Width="19">
-            <Button Content="V" RenderTransformOrigin="0.5,0.5" Click="btnControlOrnillaUp">
+
+            <Button Content="↓" RenderTransformOrigin="0.5,0.5" Click="btnControlOrnillaUp">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -39,8 +49,12 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <TextBlock HorizontalAlignment="Center" x:Name="ControlOrnillaTXT"><Run Text="0"/></TextBlock>
-            <Button RenderTransformOrigin="0.5,0.5" Content="V" Click="btnControlOrnillaDown" >
+
+            <TextBlock x:Name="ControlOrnillaTXT" HorizontalAlignment="Center">
+                <Run Text="0"/>
+            </TextBlock>
+
+            <Button RenderTransformOrigin="0.5,0.5" Content="↓" Click="btnControlOrnillaDown" >
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -61,7 +75,8 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </StackPanel.RenderTransform>
-            <Button Content="V" RenderTransformOrigin="0.5,0.5" Click="btnAperturaTanqueIzquierdo">
+
+            <Button Content="↓" RenderTransformOrigin="0.5,0.5" Click="btnAperturaTanqueIzquierdo" >
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -71,7 +86,8 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <TextBlock HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" x:Name="ControlAperturaTanqueTXT">
+
+            <TextBlock HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" x:Name="ControlAperturaTanqueTXT" >
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -79,8 +95,12 @@
                         <RotateTransform Angle="90"/>
                         <TranslateTransform/>
                     </TransformGroup>
-                </TextBlock.RenderTransform><Run Text="0"/></TextBlock>
-            <Button RenderTransformOrigin="0.5,0.5" Content="V" Click="btnAperturaTanqueDerecho">
+                </TextBlock.RenderTransform>
+                
+                <Run Text="0"/>
+            </TextBlock>
+
+            <Button RenderTransformOrigin="0.5,0.5" Content="↓" Click="btnAperturaTanqueDerecho" >
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
