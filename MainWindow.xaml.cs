@@ -76,7 +76,7 @@ namespace SimulacionEstufa
 
         public void Tickevent(object sender, EventArgs e)
         {
-            ResultadosBox.Text = "Resultado:\n\n";
+            ResultadosBox.Text = "Resultado:\n";
             ResultadosBox.Text += $"Tiempo: {stopWatch.Elapsed.ToString(@"hh\:mm\:ss")}\n";
             ResultadosBox.Text += $"Temperatura: {simulacion.GetTemperatura().ToString("N2")}\n";
             ResultadosBox.Text += $"Calor necesario: {simulacion.CalorNecesario().ToString("N2")}\n";

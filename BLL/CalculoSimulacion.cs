@@ -27,9 +27,29 @@ namespace SimulacionEstufa.bll
             return (estufa.temperaturaDeseada - estufa.temperaturaInicial) * estufa.capacidadRecipiente * estufa.calorEspecifico;
         }
 
+        // Tiempo necesario para calentar el agua en segundos
+        private double TiempoGas() {
+            return CalorNecesario() / estufa.calorEspecifico;
+        }
+
+        // Cantidad de gas necesario en kg
+        private double gasNecesario() {
+            return estufa.presionTanque * estufa.volumenGasTanque * estufa.densidadGas;
+        }
+
+        // Flujo de gas necesario en kg/s
+        private double VolumenGas() {
+            return (gasNecesario() / TiempoGas()) * estufa.eficienciaTanque;
+        }
+
+        // Velocidad del gas en el tubo en m/s
+        public double VelocidadGas() {
+            return VolumenGas() / VolumenManguera();
+        }
+
         // Calculamos la potencia efectiva de la estufa
         private double PotenciaEfectiva() {
-            return estufa.potenciaEstufa * estufa.eficienciaEstufa;
+            return VelocidadGas() * estufa.eficienciaEstufa;
         }
         
         // Calculamos la cantidad de calor generada por la estufa en un segundo

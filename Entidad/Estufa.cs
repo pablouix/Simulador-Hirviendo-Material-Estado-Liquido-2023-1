@@ -31,5 +31,6 @@ namespace SimulacionEstufa.Entidad
         // Presión del gas en el tanque en psi
         public double presionTanque { get; set; }
         public double densidadGas = 1.52;
+        public double volumenGasTanque = 100.0;
     }
 }
