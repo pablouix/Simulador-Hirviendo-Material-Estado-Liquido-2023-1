@@ -82,7 +82,6 @@ namespace SimulacionEstufa.BLL
 
         public void Resultado()
         {
-
         }
     }
 }
